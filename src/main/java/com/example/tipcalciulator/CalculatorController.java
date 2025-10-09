@@ -27,7 +27,7 @@ public class CalculatorController {
     private void onSlider(MouseEvent e){
         try{
             sliderLabel.setText(""+slider.getValue());
-            double numAmt = Double.parseDouble(amount.getText());   // <-- was int/Integer.parseInt
+            double numAmt = Double.parseDouble(amount.getText());
             tip.setText(String.format("%.2f",(numAmt * slider.getValue()) / 100));
             total.setText(String.format("%.2f",(numAmt + Double.parseDouble(tip.getText()))));
             invalidLabel.setVisible(false);
@@ -40,7 +40,7 @@ public class CalculatorController {
     @FXML
     private void onAmount(KeyEvent e){
         try{
-            double numAmt = Double.parseDouble(amount.getText());   // <-- was int/Integer.parseInt
+            double numAmt = Double.parseDouble(amount.getText());
             tip.setText(String.format("%.2f",(numAmt * slider.getValue()) / 100));
             total.setText(String.format("%.2f",(numAmt + Double.parseDouble(tip.getText()))));
             invalidLabel.setVisible(false);
