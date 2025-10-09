@@ -4,7 +4,7 @@ import javafx.fxml.FXML;
 import javafx.scene.control.TextField;
 import javafx.scene.control.Slider;
 import javafx.scene.control.Label;
-import javafx.event.ActionEvent;
+import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
 
 
@@ -38,7 +38,7 @@ public class CalculatorController {
     }
 
     @FXML
-    private void onAmount(ActionEvent e){
+    private void onAmount(KeyEvent e){
         try{
             double numAmt = Double.parseDouble(amount.getText());   // <-- was int/Integer.parseInt
             tip.setText(String.format("%.2f",(numAmt * slider.getValue()) / 100));
